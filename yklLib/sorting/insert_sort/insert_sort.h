@@ -1,6 +1,6 @@
 //
 //  InsertSort.h
-//  CodeDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/16/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -20,4 +20,4 @@ public:
 
 #include "insert_sort.cc"
 
-#endif /* defined(__CodeDrill__InsertSort__) */
+#endif /* defined(__yklLib__InsertSort__) */

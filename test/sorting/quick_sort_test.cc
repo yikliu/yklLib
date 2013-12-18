@@ -1,6 +1,6 @@
 //
 //  QuickSort_Test.cpp
-//  CodeDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/15/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -12,7 +12,7 @@
 #include <iostream>
 #include <gtest/gtest.h>
 
-#include "../../yikliu/sorting/quick_sort/quick_sort.h"
+#include "../../yklLib/sorting/quick_sort/quick_sort.h"
 #include "test_helper.h"
 
 namespace{

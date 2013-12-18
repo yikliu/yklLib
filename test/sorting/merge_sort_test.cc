@@ -1,6 +1,6 @@
 //
 //  merge_sort_test.cc
-//  CodeDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/17/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -9,7 +9,7 @@
 #define YIKUN_TEST
 
 #include <gtest/gtest.h>
-#include "../../yikliu/sorting/merge_sort/merge_sort.h"
+#include "../../yklLib/sorting/merge_sort/merge_sort.h"
 #include "../test_helper.h"
 
 TEST(MergeSortTest, Sort)

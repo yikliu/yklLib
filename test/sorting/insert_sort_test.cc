@@ -1,6 +1,6 @@
 //
 //  InsertSortTest.cc
-//  CodeDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/16/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-#include "../../yikliu/sorting/insert_sort/insert_sort.h"
+#include "../../yklLib/sorting/insert_sort/insert_sort.h"
 #include "test_helper.h"
 #include <gtest/gtest.h>
 

@@ -1,6 +1,6 @@
 //
 //  TestQuickSort.h
-//  CodeDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/15/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -9,7 +9,7 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yikliu/data_structure/my_string/my_string.h"
+#include "../../yklLib/data_structure/my_string/my_string.h"
 #include <gtest/gtest.h>
 
 TEST(MyString, DefaultConstructor) {

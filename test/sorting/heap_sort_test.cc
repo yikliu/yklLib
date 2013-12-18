@@ -1,6 +1,6 @@
 //
 //  HeapSortTest.cc
-//  CodeDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/16/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -8,8 +8,8 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yikliu/data_structure/heap/heap.h"
-#include "../../yikliu/data_structure/helper/heap_node.h"
+#include "../../yklLib/data_structure/heap/heap.h"
+#include "../../yklLib/data_structure/helper/heap_node.h"
 #include <gtest/gtest.h>
 
 namespace{

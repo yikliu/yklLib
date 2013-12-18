@@ -89,4 +89,4 @@ private:
 // include the source file since template class
 #include "stack.cc"
 
-#endif  // !defined _CS507_STACK_H_
+#endif  // 

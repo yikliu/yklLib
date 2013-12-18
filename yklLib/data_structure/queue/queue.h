@@ -85,4 +85,4 @@ private:
 // include the source file since template class
 #include "queue.cc"
 
-#endif  // !defined _CS507_QUEUE_H_
+#endif  // 

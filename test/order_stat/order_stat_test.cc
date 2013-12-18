@@ -1,6 +1,6 @@
 //
 //  order_stat_test.cc
-//  AlgorithmDrill
+//  yklLib
 //
 //  Created by Yikun Liu on 12/17/13.
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <gtest/gtest.h>
-#include "../../yikliu/order_stat/order_stat.h"
+#include "../../yklLib/order_stat/order_stat.h"
 
 TEST(OrderStatTest, RandomSelect)
 {
