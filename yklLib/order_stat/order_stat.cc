@@ -26,13 +26,13 @@ OrderStatistics<T>::~OrderStatistics(void)
 }
 
 template<typename T>
-T& OrderStatistics<T>::RandomSelect(T * data, size_t left, size_t right, size_t target)
+T& OrderStatistics<T>::RandomSelect(T * data, int left, int right, int target)
 {
    if(right == left)
        return data[left];
     
-    size_t q = q_sorter->RandomPartition(data, left, right);
-    size_t k = q - left + 1;
+    int q = q_sorter->RandomPartition(data, left, right);
+    int k = q - left + 1;
     
     if (target == k)
     {

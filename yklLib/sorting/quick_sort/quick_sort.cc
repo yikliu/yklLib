@@ -19,19 +19,19 @@ QuickSort<T>::~QuickSort(){
 }
 
 template<typename T>
-void QuickSort<T>::Sort(T* data, size_t left, size_t right)
+void QuickSort<T>::Sort(T* data, int left, int right)
 {
     if(left < right){
-        size_t pivot = this->RandomPartition(data, left, right);
+        int pivot = this->RandomPartition(data, left, right);
         this->Sort(data, left, pivot - 1);
         this->Sort(data, pivot + 1, right);
     }
 }
 
 template<typename T>
-size_t QuickSort<T>::Partition(T * data, size_t left, size_t right){
-    size_t i = left - 1;
-    for (size_t j = left; j < right; j++){
+int QuickSort<T>::Partition(T * data, int left, int right){
+    int i = left - 1;
+    for (int j = left; j < right; j++){
         if(data[j] <= data[right]){
             i++;
             this->ExchangeByValue(data, i,j);
@@ -42,15 +42,17 @@ size_t QuickSort<T>::Partition(T * data, size_t left, size_t right){
 }
 
 template<typename T>
-size_t QuickSort<T>::RandomPartition(T * data, size_t left, size_t right){
+int QuickSort<T>::RandomPartition(T * data, int left, int right){
     srand((unsigned)time(0));
-    size_t rand_pos = left + rand() % (right - left + 1);
-    this->ExchangeByValue(data, rand_pos,right);
+    
+    int rand_pos = left + rand() % (right - left + 1) ;
+    
+    this->ExchangeByValue(data, rand_pos, right);
     return Partition(data, left, right);
 }
 
 template<typename T>
-void QuickSort<T>::ExchangeByValue(T* data, size_t pos1, size_t pos2){
+void QuickSort<T>::ExchangeByValue(T* data, int pos1, int pos2){
     T temp = data[pos1];
     data[pos1] = data[pos2];
     data[pos2] = temp;

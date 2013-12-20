@@ -20,7 +20,7 @@ public:
     virtual ~OrderStatistics(void);
     
     //Get he ith element from array
-    T& RandomSelect(T* data, size_t left, size_t right, size_t target);
+    T& RandomSelect(T* data, int left, int right, int target);
     
 private:
     QuickSort<T> * q_sorter;

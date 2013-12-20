@@ -20,17 +20,17 @@ class QuickSort{
 public:
     QuickSort(void);
     virtual ~QuickSort();
-    void Sort(T* data, size_t left, size_t right);
+    void Sort(T* data, int left, int right);
     
     template <typename U>
     friend class OrderStatistics;
     
 private:
-    size_t Partition(T* data, size_t left, size_t right);
-    size_t RandomPartition(T* data, size_t left, size_t right);
+    int Partition(T* data, int left, int right);
+    int RandomPartition(T* data, int left, int right);
     
 
-    void ExchangeByValue(T* data, size_t pos1, size_t pos2);
+    void ExchangeByValue(T* data, int pos1, int pos2);
 };
 
 #include "quick_sort.cc"
