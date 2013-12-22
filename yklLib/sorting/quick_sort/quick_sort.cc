@@ -10,16 +10,18 @@
 
 #include "quick_sort.h"
 
+namespace sorter = yikliu::sorting;
+
 template<typename T>
-QuickSort<T>::QuickSort(void){
+sorter::QuickSort<T>::QuickSort(void){
 }
 
 template<typename T>
-QuickSort<T>::~QuickSort(){
+sorter::QuickSort<T>::~QuickSort(){
 }
 
 template<typename T>
-void QuickSort<T>::Sort(T* data, int left, int right)
+void sorter::QuickSort<T>::Sort(T* data, int left, int right)
 {
     if(left < right){
         int pivot = this->RandomPartition(data, left, right);
@@ -29,7 +31,7 @@ void QuickSort<T>::Sort(T* data, int left, int right)
 }
 
 template<typename T>
-int QuickSort<T>::Partition(T * data, int left, int right){
+int sorter::QuickSort<T>::Partition(T * data, int left, int right){
     int i = left - 1;
     for (int j = left; j < right; j++){
         if(data[j] <= data[right]){
@@ -42,7 +44,7 @@ int QuickSort<T>::Partition(T * data, int left, int right){
 }
 
 template<typename T>
-int QuickSort<T>::RandomPartition(T * data, int left, int right){
+int sorter::QuickSort<T>::RandomPartition(T * data, int left, int right){
     srand((unsigned)time(0));
     
     int rand_pos = left + rand() % (right - left + 1) ;
@@ -52,7 +54,7 @@ int QuickSort<T>::RandomPartition(T * data, int left, int right){
 }
 
 template<typename T>
-void QuickSort<T>::ExchangeByValue(T* data, int pos1, int pos2){
+void sorter::QuickSort<T>::ExchangeByValue(T * data, int pos1, int pos2){
     T temp = data[pos1];
     data[pos1] = data[pos2];
     data[pos2] = temp;

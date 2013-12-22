@@ -12,26 +12,36 @@
 #include <iostream>
 #include "../../order_stat/order_stat.h"
 
-template<class U>
-class OrderStatistics;
+namespace yikliu {
+    //forward declaration
+    namespace order_stat{
+        template<class U>
+        class OrderStatistics;
+    }
+    
+    namespace sorting{
+        
+        template <typename T>
+        class QuickSort{
+        public:
+            QuickSort(void);
+            virtual ~QuickSort();
+            void Sort(T* data, int left, int right);
+            
+            template <typename U>
+            friend class order_stat::OrderStatistics;
+            
+        private:
+            int Partition(T* data, int left, int right);
+            int RandomPartition(T* data, int left, int right);
+            
+            
+            void ExchangeByValue(T* data, int pos1, int pos2);
+        };
+    }
+}
 
-template <typename T>
-class QuickSort{
-public:
-    QuickSort(void);
-    virtual ~QuickSort();
-    void Sort(T* data, int left, int right);
-    
-    template <typename U>
-    friend class OrderStatistics;
-    
-private:
-    int Partition(T* data, int left, int right);
-    int RandomPartition(T* data, int left, int right);
-    
 
-    void ExchangeByValue(T* data, int pos1, int pos2);
-};
 
 #include "quick_sort.cc"
 

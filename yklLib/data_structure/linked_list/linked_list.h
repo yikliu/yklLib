@@ -12,31 +12,36 @@
 #include <iostream>
 #include "linked_node.h"
 
-template<typename T>
-class LinkedList{
-public:
-    LinkedList(void);
-    
-    virtual ~LinkedList(void);
-    
-    inline size_t Size(void){return this->length;}
-    
-    LinkedNode<T> * GetNodeAt(size_t pos);
-    
-    //methods
-    void Insert(LinkedNode<T> * node, size_t pos);
-    
-    void Delete(size_t pos);
-    
-    void AppendAtTail(LinkedNode<T> * node);
-    
-    void Print(void);
-    
-    LinkedNode<T> * head;
+namespace yikliu{
+    namespace data_structure{
 
-private:
-    size_t length;
-};
+        template<typename T>
+        class LinkedList{
+        public:
+            LinkedList(void);
+            
+            virtual ~LinkedList(void);
+            
+            inline size_t Size(void){return this->length;}
+            
+            data_structure::LinkedNode<T> * GetNodeAt(size_t pos);
+            
+            //methods
+            void Insert(LinkedNode<T> * node, size_t pos);
+            
+            void Delete(size_t pos);
+            
+            void AppendAtTail(LinkedNode<T> * node);
+            
+            void Print(void);
+            
+            LinkedNode<T> * head;
+
+        private:
+            size_t length;
+        };
+    }
+}
 
 #include "linked_list.cc"
 

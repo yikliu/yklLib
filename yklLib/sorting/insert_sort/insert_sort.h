@@ -8,15 +8,19 @@
 
 #ifndef YKL_INSERTSORT_H_
 #define YKL_INSERTSORT_H_
+namespace yikliu{
+    namespace sorting{
+        template<typename T>
+        class InsertSort{
+        public:
+            InsertSort(void);
+            virtual ~InsertSort(void);
+            
+            void Sort(T* data, size_t size);
+        };
+    }
+}
 
-template<typename T>
-class InsertSort{
-public:
-    InsertSort(void);
-    virtual ~InsertSort(void);
-    
-    void Sort(T* data, size_t size);
-};
 
 #include "insert_sort.cc"
 

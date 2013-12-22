@@ -7,11 +7,13 @@
 #include <iostream>
 #include "array.h"
 
+namespace ds = yikliu::data_structure;
+
 //
 // Array
 //
 template <typename T>
-Array <T>::Array (void)
+ds::Array <T>::Array (void)
 :data_(0),
 cur_size_(0),
 max_size_(DEFAULT_MAXSIZE)
@@ -23,7 +25,7 @@ max_size_(DEFAULT_MAXSIZE)
 // Array (size_t)
 //
 template <typename T>
-Array <T>::Array (size_t length)
+ds::Array <T>::Array (size_t length)
 :data_(0),
 cur_size_(0),
 max_size_(0)
@@ -36,7 +38,7 @@ max_size_(0)
 // Array (size_t, char)
 //
 template <typename T>
-Array <T>::Array (size_t length, T fill)
+ds::Array <T>::Array (size_t length, T fill)
 :data_(0),
 cur_size_(0),
 max_size_(0)
@@ -50,7 +52,7 @@ max_size_(0)
 // Array (const Array &)
 //
 template <typename T>
-Array <T>::Array (const Array & Array)
+ds::Array <T>::Array (const Array & Array)
 :data_(0),
 cur_size_(0),
 max_size_(0)
@@ -70,7 +72,7 @@ max_size_(0)
 // Array (T[] Array)
 //
 template <typename T>
-Array <T>::Array (const T * arr, size_t size)
+ds::Array <T>::Array (const T * arr, size_t size)
 :data_(0),
 cur_size_(0),
 max_size_(0)
@@ -90,7 +92,7 @@ max_size_(0)
 // ~Array
 //
 template <typename T>
-Array <T>::~Array (void)
+ds::Array <T>::~Array (void)
 {
 	delete[] data_;
 }
@@ -99,7 +101,7 @@ Array <T>::~Array (void)
 // operator =
 //
 template <typename T>
-const Array <T> & Array <T>::operator = (const Array & rhs)
+const ds::Array <T> & ds::Array <T>::operator = (const Array & rhs)
 {
 	if (this == &rhs)
 	{
@@ -123,7 +125,7 @@ const Array <T> & Array <T>::operator = (const Array & rhs)
 // operator []
 //
 template <typename T>
-T & Array <T>::operator [] (size_t index)
+T & ds::Array <T>::operator [] (size_t index)
 {
 	if (index < this->cur_size_)
 	{
@@ -136,7 +138,7 @@ T & Array <T>::operator [] (size_t index)
 // at
 //
 template <typename T>
-T & Array<T>::at(size_t index){
+T & ds::Array<T>::at(size_t index){
     return this->operator[](index);
 }
 
@@ -144,7 +146,7 @@ T & Array<T>::at(size_t index){
 // operator []
 //
 template <typename T>
-const T & Array <T>::operator [] (size_t index) const
+const T & ds::Array <T>::operator [] (size_t index) const
 {
 	if (index < this->cur_size_)
 	{
@@ -154,10 +156,10 @@ const T & Array <T>::operator [] (size_t index) const
 }
 
 //
-// get
+// get (copy)
 //
 template <typename T>
-T Array <T>::get (size_t index) const
+T ds::Array <T>::get (size_t index) const
 {
 	if (index < this->cur_size_)
 	{
@@ -170,7 +172,7 @@ T Array <T>::get (size_t index) const
 // set
 //
 template <typename T>
-void Array <T>::set (size_t index, T value)
+void ds::Array <T>::set (size_t index, T value)
 {
 	if (index < this->cur_size_)
 	{
@@ -184,7 +186,7 @@ void Array <T>::set (size_t index, T value)
 // resize
 //
 template <typename T>
-void Array <T>::resize (size_t new_size)
+void ds::Array <T>::resize (size_t new_size)
 {
 	if (new_size == this->cur_size_)  //new_size == cur_size
 	{
@@ -227,7 +229,7 @@ void Array <T>::resize (size_t new_size)
 // find (T)
 //
 template  <typename T>
-int Array <T>::find (T value) const
+int ds::Array <T>::find (T value) const
 {
 	try
 	{
@@ -243,7 +245,7 @@ int Array <T>::find (T value) const
 // find (T, size_t)
 //
 template <typename T>
-int Array <T>::find (T val, size_t start) const
+int ds::Array <T>::find (T val, size_t start) const
 {
 	if (start >= this->cur_size_)
 	{
@@ -263,7 +265,7 @@ int Array <T>::find (T val, size_t start) const
 // operator ==
 //
 template <typename T>
-bool Array <T>::operator == (const Array & rhs) const
+bool ds::Array <T>::operator == (const Array & rhs) const
 {
 	if (this == &rhs)
 	{
@@ -276,7 +278,7 @@ bool Array <T>::operator == (const Array & rhs) const
 // operator !=
 //
 template <typename T>
-bool Array <T>::operator != (const Array & rhs) const
+bool ds::Array <T>::operator != (const Array & rhs) const
 {
 	if (this->cur_size_ != rhs.cur_size_)
 	{
@@ -298,7 +300,7 @@ bool Array <T>::operator != (const Array & rhs) const
 // fill
 //
 template <typename T>
-void Array <T>::fill (T value)
+void ds::Array <T>::fill (T value)
 {
 	T * iter = this->data_;
 	for (size_t i = 0; i < this->cur_size_; i++)
@@ -312,7 +314,7 @@ void Array <T>::fill (T value)
 // print
 //
 template <typename T>
-void Array<T>::print()
+void ds::Array<T>::print()
 {
     T * iter = this->data_;
     std::cout<<"[";
@@ -324,7 +326,7 @@ void Array<T>::print()
 }
 
 template <typename T>
-T * Array<T>::generateNativeArray(void)
+T * ds::Array<T>::generateNativeArray(void)
 {
     size_t s = this->cur_size_;
     T * ret = new T[s];
@@ -339,7 +341,7 @@ T * Array<T>::generateNativeArray(void)
 // Exchange
 //
 template <typename T>
-void Array<T>::exchange(size_t i, size_t j)
+void ds::Array<T>::exchange(size_t i, size_t j)
 {
     T temp = this->get(i);
     this->set(i,this->get(j));

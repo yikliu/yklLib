@@ -1,9 +1,11 @@
+namespace ds = yikliu::data_structure;
+
 //
 // size
 //
 template <typename T>
 inline
-size_t Array <T>::size (void) const
+size_t ds::Array <T>::size (void) const
 {
 	return this->cur_size_;
 }
@@ -13,7 +15,7 @@ size_t Array <T>::size (void) const
 //
 template <typename T>
 inline
-size_t Array <T>::max_size (void) const
+size_t ds::Array <T>::max_size (void) const
 {
 	return this->max_size_;
 }

@@ -1,9 +1,11 @@
+namespace ds = yikliu::data_structure;
+
 //
 // size
 //
 template <typename T>
 inline
-size_t Queue <T>::size (void) const
+size_t ds::Queue<T>::size (void) const
 {
 	return this->tail_ - this->head_;
 }
@@ -13,7 +15,7 @@ size_t Queue <T>::size (void) const
 //
 template <typename T>
 inline
-bool Queue <T>::is_empty (void) const
+bool ds::Queue<T>::is_empty (void) const
 {
 	return this->head_ == -1;
 }

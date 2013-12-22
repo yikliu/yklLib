@@ -10,28 +10,30 @@
 
 #include "heap.h"
 
-Heap::Heap (void)
+namespace ds = yikliu::data_structure;
+
+ds::Heap::Heap (void)
 : _array(0),
 _heap_size(0)
 {
     _array = new Array<HeapNode>();
 }
 
-Heap::Heap(Array<HeapNode> & array)
+ds::Heap::Heap(Array<HeapNode> & array)
 :_array(0),
 _heap_size(0)
 {
     _array = new Array<HeapNode>(array);
 }
 
-void Heap::set_array(Array<HeapNode> & array)
+void ds::Heap::set_array(Array<HeapNode> & array)
 {
     if(_array)
         delete _array;
     _array = new Array<HeapNode>(array);
 }
 
-Heap::~Heap (void)
+ds::Heap::~Heap (void)
 {
     _heap_size = 0;
     if(_array)
@@ -40,7 +42,7 @@ Heap::~Heap (void)
     }
 }
 
-void Heap::heapify(size_t i)
+void ds::Heap::heapify(size_t i)
 {
     if(i >= _heap_size)
         return;
@@ -69,7 +71,7 @@ void Heap::heapify(size_t i)
     }
 }
 
-void Heap::build_heap(void)
+void ds::Heap::build_heap(void)
 {
     _heap_size = _array->size();
     for(int i = (int)(_array->size() / 2 - 1); i >= 0; i--)
@@ -78,7 +80,7 @@ void Heap::build_heap(void)
     }
 }
 
-void Heap::heap_sort(void)
+void ds::Heap::heap_sort(void)
 {
     this->build_heap();
     size_t n = _array->size();
@@ -90,10 +92,10 @@ void Heap::heap_sort(void)
     
 }
 
-HeapNode& Heap::pop(void)
+ds::HeapNode& ds::Heap::pop(void)
 {
     if(_heap_size < 1)
-        throw new myException("Heap Underflow");
+        throw new exception::my_exception("Heap Underflow");
     this->exchange(0,_heap_size - 1);
     HeapNode & nd = (*_array)[_heap_size - 1];
     _heap_size--;
@@ -101,7 +103,7 @@ HeapNode& Heap::pop(void)
     return nd;
 }
 
-void Heap::insert(HeapNode nd, unsigned long key)
+void ds::Heap::insert(HeapNode nd, unsigned long key)
 {
     _heap_size++;
     if(_array->size() < _heap_size){
@@ -114,10 +116,10 @@ void Heap::insert(HeapNode nd, unsigned long key)
     this->increase_key(_heap_size - 1, key);
 }
 
-void Heap::increase_key(size_t i, unsigned long k)
+void ds::Heap::increase_key(size_t i, unsigned long k)
 {    
     if(_array->at(i) > k)
-        throw new myException("current key is greater than new key");
+        throw new exception::my_exception("current key is greater than new key");
     
     _array->at(i) = k;
     
@@ -129,10 +131,10 @@ void Heap::increase_key(size_t i, unsigned long k)
 }
 
 //move down the left path
-void Heap::decrease_key(size_t i, unsigned long k)
+void ds::Heap::decrease_key(size_t i, unsigned long k)
 {
     if(_array->at(i) < k)
-        throw new myException("new Key is > current key");
+        throw new exception::my_exception("new Key is > current key");
     (*_array)[i].key = k; 
     while (i > 0 && _array->at(this->left(i)) > _array->at(i))
     {
@@ -141,7 +143,7 @@ void Heap::decrease_key(size_t i, unsigned long k)
     }
 }
 
-void Heap::exchange(size_t i, size_t j)
+void ds::Heap::exchange(size_t i, size_t j)
 {
     if(i >= _array->size() || j >= _array->size())
     {
@@ -153,7 +155,7 @@ void Heap::exchange(size_t i, size_t j)
     std::swap((*_array)[i], (*_array)[j]);
 }
 
-HeapNode * Heap::get_native_array(void)
+ds::HeapNode * ds::Heap::get_native_array(void)
 {
     return _array->generateNativeArray();
 }

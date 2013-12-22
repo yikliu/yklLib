@@ -9,46 +9,52 @@
 #define YIKUN_TEST
 
 #include "../../yklLib/data_structure/heap/heap.h"
-#include "../../yklLib/data_structure/helper/heap_node.h"
+#include "../../yklLib/data_structure/heap/heap_node.h"
 #include <gtest/gtest.h>
 
-namespace{
-    class HeapSortTest : public ::testing::Test{
-    protected:
-        HeapSortTest() {
-            sorter = new Heap();
-        }
+namespace yikliu{
+    namespace test{
+        namespace ds = yikliu::data_structure;
         
-        virtual ~HeapSortTest() {
-            if(sorter){
-                delete sorter;
-                sorter = NULL;
+        class HeapSortTest : public ::testing::Test{
+        protected:
+            HeapSortTest() {
+                sorter = new ds::Heap();
             }
-        }
-        
-        virtual void SetUp() {
-            HeapNode n1(17);
-            HeapNode n2(23);
-            HeapNode n3(12);
-            HeapNode n4(55);
-            HeapNode list[4] = {n1,n2,n3,n4};
-            Array<HeapNode> arr(list,4);
-            //arr.print();
-            sorter->set_array(arr);
-        }
-        
-        virtual void TearDown() {
             
-        }
+            virtual ~HeapSortTest() {
+                if(sorter){
+                    delete sorter;
+                    sorter = NULL;
+                }
+            }
+            
+            virtual void SetUp() {
+                ds::HeapNode n1(17);
+                ds::HeapNode n2(23);
+                ds::HeapNode n3(12);
+                ds::HeapNode n4(55);
+                ds::HeapNode list[4] = {n1,n2,n3,n4};
+                ds::Array<ds::HeapNode> arr(list,4);
+                //arr.print();
+                sorter->set_array(arr);
+            }
+            
+            virtual void TearDown() {
+                
+            }
+            
+            ds::Heap * sorter;
+        };
         
-        Heap * sorter;
-    };
-    
-    TEST_F(HeapSortTest, sort){
-        sorter->heap_sort();
-        EXPECT_EQ(55, sorter->top().key);
+        TEST_F(HeapSortTest, sort){
+            sorter->heap_sort();
+            EXPECT_EQ(55, sorter->top().key);
+        }
+ 
     }
 }
+
 
 
 #endif

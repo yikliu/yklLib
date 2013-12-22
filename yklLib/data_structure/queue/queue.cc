@@ -7,11 +7,13 @@
 #include <stdexcept>  // for std::out_of_bounds exception
 #include "queue.h"
 
+namespace ds = yikliu::data_structure;
+
 //
 // Queue
 //
 template <typename T>
-Queue <T>::Queue (void)
+ds::Queue<T>::Queue (void)
 	:array_(0),
 	head_(-1),
 	tail_(-1)
@@ -23,7 +25,7 @@ Queue <T>::Queue (void)
 // Queue
 //
 template <typename T>
-Queue <T>::Queue (const Queue & queue)
+ds::Queue<T>::Queue (const Queue & queue)
     :array_(0),
     head_(-1),
     tail_(-1)
@@ -37,7 +39,7 @@ Queue <T>::Queue (const Queue & queue)
 // ~Queue
 //
 template <typename T>
-Queue <T>::~Queue (void)
+ds::Queue<T>::~Queue (void)
 {
 	if (array_ != 0)
 	{
@@ -49,7 +51,7 @@ Queue <T>::~Queue (void)
 // enqueue
 //
 template <typename T>
-void Queue <T>::enqueue (T element)
+void ds::Queue<T>::enqueue (T element)
 {
 	// Increment the allocation space if the the space is used up
 	if (this->tail_ >= (int)array_->max_size())
@@ -76,11 +78,11 @@ void Queue <T>::enqueue (T element)
 // dequeue
 //
 template <typename T>
-T Queue <T>::dequeue (void)
+T ds::Queue<T>::dequeue (void)
 {
 	if (this->is_empty())
 	{
-		throw new my_exception("Queue is empty");
+		throw new exception::my_exception("Queue is empty");
 	}
 	try
 	{
@@ -101,7 +103,7 @@ T Queue <T>::dequeue (void)
 // operator =
 //
 template <typename T>
-const Queue <T> & Queue <T>::operator = (const Queue & rhs)
+const ds::Queue<T> & ds::Queue <T>::operator = (const ds::Queue<T> & rhs)
 {
 	if(this == &rhs)
 	{
@@ -117,7 +119,7 @@ const Queue <T> & Queue <T>::operator = (const Queue & rhs)
 // clear
 //
 template <typename T>
-void Queue <T>::clear (void)
+void ds::Queue<T>::clear (void)
 {
 	this->head_ = -1;
 	this->tail_ = -1;

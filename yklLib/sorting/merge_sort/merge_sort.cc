@@ -10,21 +10,23 @@
 
 #include "merge_sort.h"
 
-template<typename T>
-MergeSort<T>::MergeSort(void){}
+namespace sorter = yikliu::sorting;
 
 template<typename T>
-MergeSort<T>::~MergeSort(void){}
+sorter::MergeSort<T>::MergeSort(void){}
 
 template<typename T>
-void MergeSort<T>::Sort(T * data, size_t size)
+sorter::MergeSort<T>::~MergeSort(void){}
+
+template<typename T>
+void sorter::MergeSort<T>::Sort(T * data, size_t size)
 {
     T temp[size];
     this->MSort(data, temp, 0, size - 1);
 }
 
 template<typename T>
-void MergeSort<T>::MSort(T * data, T * temp, size_t begin, size_t end)
+void sorter::MergeSort<T>::MSort(T * data, T * temp, size_t begin, size_t end)
 {
     if((end - begin) < 1)
     {
@@ -39,7 +41,7 @@ void MergeSort<T>::MSort(T * data, T * temp, size_t begin, size_t end)
 }
 
 template<typename T>
-void MergeSort<T>::Merge(T * data, T * temp, size_t begin, size_t end, size_t mid)
+void sorter::MergeSort<T>::Merge(T * data, T * temp, size_t begin, size_t end, size_t mid)
 {
     size_t i = begin;
     size_t j = mid + 1;
@@ -67,7 +69,7 @@ void MergeSort<T>::Merge(T * data, T * temp, size_t begin, size_t end, size_t mi
 }
 
 template<typename T>
-void MergeSort<T>::Debug(T * data, size_t size)
+void sorter::MergeSort<T>::Debug(T * data, size_t size)
 {
     T * iter = data;
     std::cout<<"[";

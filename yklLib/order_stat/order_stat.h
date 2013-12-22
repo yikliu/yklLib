@@ -8,23 +8,32 @@
 
 #ifndef YKL_Order_Stat_H_
 #define YKL_Order_Stat_H_
-
 #include "../sorting/quick_sort/quick_sort.h"
-template<typename T>
-class QuickSort;
 
-template<typename T>
-class OrderStatistics {
-public:
-    OrderStatistics(void);
-    virtual ~OrderStatistics(void);
+namespace yikliu {
     
-    //Get he ith element from array
-    T& RandomSelect(T* data, int left, int right, int target);
+    //forward declaration
+    namespace sorting{
+        template<typename T>
+        class QuickSort;
+    }
     
-private:
-    QuickSort<T> * q_sorter;
-};
+    namespace order_stat{
+        
+        template<typename T>
+        class OrderStatistics {
+        public:
+            OrderStatistics(void);
+            virtual ~OrderStatistics(void);
+            
+            //Get he ith element from array
+            T& RandomSelect(T* data, int left, int right, int target);
+            
+        private:
+            sorting::QuickSort<T> * q_sorter;
+        };
+    }
+}
 
 #include "order_stat.cc"
 

@@ -6,11 +6,14 @@
 
 #include <stdexcept>  // for std::out_of_bounds exception
 #include "stack.h"
+
+namespace ds = yikliu::data_structure;
+
 //
 // Stack
 //
 template <typename T>
-Stack <T>::Stack (void)
+ds::Stack<T>::Stack (void)
 	:array_(0),
 	top_(-1)
 {
@@ -21,7 +24,7 @@ Stack <T>::Stack (void)
 // Stack
 //
 template <typename T>
-Stack <T>::Stack (const Stack & stack)
+ds::Stack<T>::Stack (const ds::Stack<T> & stack)
 	:array_(0),
 	top_(-1)
 {
@@ -33,7 +36,7 @@ Stack <T>::Stack (const Stack & stack)
 // ~Stack
 //
 template <typename T>
-Stack <T>::~Stack (void)
+ds::Stack<T>::~Stack (void)
 {	
 	if (NULL != array_)
 	{
@@ -46,7 +49,7 @@ Stack <T>::~Stack (void)
 // push
 //
 template <typename T>
-void Stack <T>::push (T element)
+void ds::Stack<T>::push (T element)
 {
 	//if the stack is full, resize the underlying array to a larger size.
 	if (this->top_ >= ((int)(array_->max_size() - 1)))
@@ -68,11 +71,11 @@ void Stack <T>::push (T element)
 // pop
 //
 template <typename T>
-void Stack <T>::pop (void)
+void ds::Stack<T>::pop (void)
 {
 	if (this->is_empty())
 	{
-		throw my_exception("Stack is empty");
+		throw new exception::my_exception("Stack is empty");
 	}	
 	this->top_--;	
 }
@@ -81,7 +84,7 @@ void Stack <T>::pop (void)
 // operator =
 //
 template <typename T>
-const Stack <T> & Stack <T>::operator = (const Stack & rhs)
+const ds::Stack<T> & ds::Stack<T>::operator = (const Stack<T> & rhs)
 {
 	if (this == &rhs)
 	{
@@ -97,7 +100,7 @@ const Stack <T> & Stack <T>::operator = (const Stack & rhs)
 // clear
 //
 template <typename T>
-void Stack <T>::clear (void)
+void ds::Stack<T>::clear (void)
 {
 	this->top_ = -1;
 }

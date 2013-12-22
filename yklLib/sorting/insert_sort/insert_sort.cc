@@ -9,14 +9,16 @@
 
 #include "insert_sort.h"
 
-template<typename T>
-InsertSort<T>::InsertSort(void){}
+namespace sorter = yikliu::sorting;
 
 template<typename T>
-InsertSort<T>::~InsertSort(void){}
+sorter::InsertSort<T>::InsertSort(void){}
 
 template<typename T>
-void InsertSort<T>::Sort(T* data, size_t size){
+sorter::InsertSort<T>::~InsertSort(void){}
+
+template<typename T>
+void sorter::InsertSort<T>::Sort(T* data, size_t size){
     size_t i, j;
     T cur_value;
     for(i = 1; i < size; i++){

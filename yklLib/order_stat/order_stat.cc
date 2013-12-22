@@ -10,14 +10,15 @@
 
 #include "order_stat.h"
 
+namespace OS = yikliu::order_stat;
 template<typename T>
-OrderStatistics<T>::OrderStatistics(void)
+OS::OrderStatistics<T>::OrderStatistics(void)
 {
-    q_sorter = new QuickSort<T>();
+    q_sorter = new sorting::QuickSort<T>();
 }
 
 template<typename T>
-OrderStatistics<T>::~OrderStatistics(void)
+OS::OrderStatistics<T>::~OrderStatistics(void)
 {
     if(q_sorter)
     {
@@ -26,12 +27,13 @@ OrderStatistics<T>::~OrderStatistics(void)
 }
 
 template<typename T>
-T& OrderStatistics<T>::RandomSelect(T * data, int left, int right, int target)
+T& OS::OrderStatistics<T>::RandomSelect(T * data, int left, int right, int target)
 {
    if(right == left)
        return data[left];
     
     int q = q_sorter->RandomPartition(data, left, right);
+    
     int k = q - left + 1;
     
     if (target == k)

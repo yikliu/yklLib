@@ -11,22 +11,34 @@
 
 #include <iostream>
 #include <exception>
-/**
- * @class empty_exception
- *
- * runtime error Exception thrown to output whatever the cause
- */
-class my_exception : public std::runtime_error
-{
-public:
-    
-    /**
-     * Initializing constructor.
-     *
-     * @param[in]      msg         Error message.
-     */
-    my_exception (const char *  msg)
-    : std::runtime_error (msg) { }
-};
+
+namespace yikliu{
+    namespace exception{
+        /**
+         * @class empty_exception
+         *
+         * runtime error Exception thrown to output whatever the cause
+         */
+        class my_exception : public std::runtime_error
+        {
+        public:
+            
+            /**
+             * Initializing constructor.
+             *
+             * @param[in]      msg         Error message.
+             */
+            my_exception (const char *  msg)
+            : std::runtime_error (msg) { this->msg = msg;}
+            
+            virtual ~my_exception() throw () { delete msg; }
+            virtual const char * what() { return msg; }
+            
+            const char * msg;
+        };
+    }
+}
+
+
 
 #endif

@@ -10,22 +10,24 @@
 
 #include "linked_node.h"
 
+namespace ds = yikliu::data_structure;
+
 template<typename T>
-LinkedNode<T>::LinkedNode(void)
+ds::LinkedNode<T>::LinkedNode(void)
 :data(0),prev(0), next(0)
 {
     data = new T();
 }
 
 template<typename T>
-LinkedNode<T>::LinkedNode(const T & p_val)
+ds::LinkedNode<T>::LinkedNode(const T & p_val)
 :data(0), prev(0), next(0)
 {
     data = new T(p_val);
 }
 
 template<typename T>
-LinkedNode<T>::~LinkedNode(void)
+ds::LinkedNode<T>::~LinkedNode(void)
 {
     if (data)
     {
@@ -33,6 +35,5 @@ LinkedNode<T>::~LinkedNode(void)
         data = NULL;
     }
 }
-
 
 #endif

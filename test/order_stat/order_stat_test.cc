@@ -10,10 +10,15 @@
 #include <gtest/gtest.h>
 #include "../../yklLib/order_stat/order_stat.h"
 
-TEST(OrderStatTest, RandomSelect)
-{
-    int data[5] = {7,6,2,5,4};
-    OrderStatistics<int> os;
-    int selected = os.RandomSelect(data,0,4,3);
-    EXPECT_EQ(5, selected);
+namespace yikliu{
+    namespace test{
+        TEST(OrderStatTest, RandomSelect)
+        {
+            int data[5] = {7,6,2,5,4};
+            yikliu::order_stat::OrderStatistics<int> os;
+            int selected = os.RandomSelect(data,0,4,3);
+            EXPECT_EQ(5, selected);
+        }
+    }
 }
+

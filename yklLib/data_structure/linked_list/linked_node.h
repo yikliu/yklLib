@@ -8,6 +8,8 @@
 
 #ifndef __yklLib__linked_node_H_
 #define __yklLib__linked_node_H_
+namespace yikliu{
+namespace data_structure{
 
 template<typename T>
 class LinkedNode{
@@ -26,6 +28,8 @@ private:
     T * data; //pointer to the satellite data
 };
 
+}
+}
 #include "linked_node.cc"
 
 #endif

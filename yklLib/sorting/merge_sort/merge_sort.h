@@ -8,20 +8,26 @@
 #ifndef YKL_Merge_Sort_H_
 #define YKL_Merge_Sort_H_
 
-template<typename T>
-class MergeSort{
-public:
-    MergeSort(void);
-    virtual ~MergeSort(void);
-    
-    void Sort(T * data, size_t size);
-    
-    void Debug(T * data, size_t size);
+namespace yikliu{
+    namespace sorting{
+        template<typename T>
+        class MergeSort{
+        public:
+            MergeSort(void);
+            virtual ~MergeSort(void);
+            
+            void Sort(T * data, size_t size);
+            
+            void Debug(T * data, size_t size);
+            
+        private:
+            void MSort(T * data, T * temp, size_t begin, size_t end);
+            void Merge(T * data, T * temp, size_t begin, size_t mid, size_t end);
+        };
+    }
+}
 
-private:
-    void MSort(T * data, T * temp, size_t begin, size_t end);
-    void Merge(T * data, T * temp, size_t begin, size_t mid, size_t end);
-};
+
 
 #include "merge_sort.cc"
 

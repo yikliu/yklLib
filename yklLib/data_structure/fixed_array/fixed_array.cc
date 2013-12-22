@@ -4,12 +4,14 @@
 #include <stdexcept>         // for std::out_of_bounds exception
 #include "fixed_array.h"
 
+namespace ds = yikliu::data_structure;
+
 //
 // Fixed_Array
 //
 template <typename T, size_t N>
-Fixed_Array <T, N>::Fixed_Array (void)
-	:Array<T>(N)
+ds::FixedArray <T, N>::FixedArray (void)
+	: ds::Array<T>(N)
 {	
 }
 
@@ -17,7 +19,7 @@ Fixed_Array <T, N>::Fixed_Array (void)
 // Fixed_Array
 //
 template <typename T, size_t N>
-Fixed_Array <T, N>::Fixed_Array (const Fixed_Array <T, N> & arr)
+ds::FixedArray <T, N>::FixedArray (const FixedArray <T, N> & arr)
 	:Array<T>(arr)
 {	
 }
@@ -27,8 +29,8 @@ Fixed_Array <T, N>::Fixed_Array (const Fixed_Array <T, N> & arr)
 //
 template <typename T, size_t N>
 template <size_t M>
-Fixed_Array <T, N>::Fixed_Array (const Fixed_Array <T, M> & arr)
-	:Array<T>(N)
+ds::FixedArray <T, N>::FixedArray (const FixedArray <T, M> & arr)
+: ds::Array<T>(N)
 {
 	size_t smaller_size = M >= N ? N : M;
 	try  
@@ -47,7 +49,7 @@ Fixed_Array <T, N>::Fixed_Array (const Fixed_Array <T, M> & arr)
 // Fixed_Array
 //
 template <typename T, size_t N>
-Fixed_Array <T, N>::Fixed_Array (T fill)
+ds::FixedArray <T, N>::FixedArray (T fill)
 	:Array<T>(N,fill)
 {	
 }
@@ -56,7 +58,7 @@ Fixed_Array <T, N>::Fixed_Array (T fill)
 // ~Fixed_Array
 //
 template <typename T, size_t N>
-Fixed_Array <T, N>::~Fixed_Array (void)
+ds::FixedArray <T, N>::~FixedArray (void)
 {	
 }
 
@@ -64,7 +66,7 @@ Fixed_Array <T, N>::~Fixed_Array (void)
 // operator =
 //
 template <typename T, size_t N>
-const Fixed_Array <T, N> & Fixed_Array <T, N>::operator = (const Fixed_Array <T, N> & rhs)
+const ds::FixedArray <T, N> & ds::FixedArray <T, N>::operator = (const FixedArray <T, N> & rhs)
 {
 	if (this != &rhs)
 	{
@@ -78,7 +80,7 @@ const Fixed_Array <T, N> & Fixed_Array <T, N>::operator = (const Fixed_Array <T,
 //
 template <typename T, size_t N>
 template <size_t M>
-const Fixed_Array <T, N> & Fixed_Array <T, N>::operator = (const Fixed_Array <T, M> & rhs)
+const ds::FixedArray <T, N> & ds::FixedArray <T, N>::operator = (const FixedArray <T, M> & rhs)
 {
 	// If N > M, then the values between [0, M-1] get to be assigned, 
 	// the portion between [M, N-1] remain the same as before assignment; 
