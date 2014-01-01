@@ -15,7 +15,7 @@ namespace yikliu{
         TEST(OrderStatTest, RandomSelect)
         {
             int data[5] = {7,6,2,5,4};
-            yikliu::order_stat::OrderStatistics<int> os;
+            order_stat::OrderStatistics<int> os;
             int selected = os.RandomSelect(data,0,4,3);
             EXPECT_EQ(5, selected);
         }

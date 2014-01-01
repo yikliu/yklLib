@@ -17,12 +17,10 @@
 
 namespace yikliu{
     namespace test{
-        namespace sorter = sorting;
-        
         class InsertSortTest : public ::testing::Test {
         protected:
             InsertSortTest() {
-                insert_sort = new sorter::InsertSort<int>();
+                insert_sort = new sorting::InsertSort<int>();
             }
             
             virtual ~InsertSortTest() {
@@ -40,7 +38,7 @@ namespace yikliu{
                 
             }
             
-            sorter::InsertSort<int> * insert_sort;
+            sorting::InsertSort<int> * insert_sort;
             
         };
         

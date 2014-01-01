@@ -14,7 +14,7 @@
 
 namespace yikliu{
     namespace test{
-        namespace ds = yikliu::data_structure;
+        namespace ds = data_structure;
         
         class HeapSortTest : public ::testing::Test{
         protected:

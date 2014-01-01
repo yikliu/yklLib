@@ -15,7 +15,8 @@
 namespace yikliu{
     namespace test
     {
-        namespace ds = yikliu::data_structure;
+        namespace ds = data_structure;
+        
         TEST(MyStringTest, DefaultConstructor) {
             const ds::MyString s;
             EXPECT_STREQ(NULL, s.c_string());

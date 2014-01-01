@@ -15,7 +15,7 @@
 namespace yikliu{
     namespace test{
         
-        namespace ds = yikliu::data_structure;
+        namespace ds = data_structure;
         
         class LinkedListTest : public ::testing::Test{
         protected:
@@ -90,7 +90,7 @@ namespace yikliu{
         {
             ds::LinkedNode<int> * node = new ds::LinkedNode<int>(-1);
             ds::LinkedNode<int> * p = llist->head;
-            ds::LinkedNode<int> * end;
+            ds::LinkedNode<int> * end = NULL;
             
             while(p)
             {

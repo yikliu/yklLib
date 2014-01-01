@@ -14,10 +14,11 @@
 
 namespace yikliu {
     namespace data_structure{
-        // A simple string class.
+        
         class MyString {
         private:
             const char* c_string_;
+            
             const MyString& operator=(const MyString& rhs);
             
         public:
