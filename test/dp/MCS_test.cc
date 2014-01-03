@@ -9,7 +9,7 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yklLib/dp/MaxSubArray/MCS.h"
+#include "../../yklLib/dp/MCS.h"
 #include <gtest/gtest.h>
 
 namespace yikliu{

@@ -9,7 +9,7 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yklLib/dp/LongestIncreasingSequence/LIS.h"
+#include "../../yklLib/dp/LIS.h"
 #include <gtest/gtest.h>
 
 namespace yikliu{
@@ -21,6 +21,7 @@ namespace yikliu{
             int n = sizeof(arr)/sizeof(arr[0]);
             int max_i;
             int max_j;
+            
             EXPECT_EQ(4, lis_.FindLIS(arr, n, max_i, max_j));
             EXPECT_EQ(2, max_i);
             EXPECT_EQ(5, max_j);
