@@ -12,10 +12,10 @@
 #include "../../yklLib/dp/MCS.h"
 #include <gtest/gtest.h>
 
-namespace yikliu{
+namespace yikliu{ 
     namespace test
     {
-        TEST(MCSTEST, Find) {
+        TEST(MCSTEST, FindMCS) {
             yikliu::dp::MCS mcs_;
             int arr[] = {-2,1,-3,4,-1,2,1,-5,4};
             int n = sizeof(arr)/sizeof(arr[0]);
