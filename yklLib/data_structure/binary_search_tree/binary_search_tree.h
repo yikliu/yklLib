@@ -33,16 +33,26 @@ namespace yikliu{
             void DeleteNode(BinaryTreeNode<T> * node);
             
             //Insert
-            BinaryTreeNode<T> * Insert(BinaryTreeNode<T> * cur, BinaryTreeNode<T> * newNode);
+            //Insert the newNode into BST with root (or root of sub tree)
+            void Insert(BinaryTreeNode<T> * cur, BinaryTreeNode<T> * newNode);
             
-            //print
-            void PrintNode(BinaryTreeNode<T> * node);
+            //Delete the node with key
+            void Delete(T key);
             
+            //Search
+            //return the node with key
+            BinaryTreeNode<T> * Search(BinaryTreeNode<T> * node, T key);
+            
+            BinaryTreeNode<T> * FindMin(BinaryTreeNode<T> * node);
+            
+            //print the tree with three walk
             void Print(void);
             
             BinaryTreeNode<T> * root;
         
         private:
+            //print one node, mainly for debug purposes
+            void PrintNode(BinaryTreeNode<T> * node);
             
         };
     }

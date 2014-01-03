@@ -26,7 +26,9 @@ namespace yikliu{
             
             data_structure::LinkedNode<T> * GetNodeAt(size_t pos);
             
-            //methods
+            /*
+             *
+             */
             void Insert(LinkedNode<T> * node, size_t pos);
             
             void Delete(size_t pos);

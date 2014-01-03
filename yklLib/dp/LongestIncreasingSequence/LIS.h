@@ -7,6 +7,8 @@
 //
 
 // This is the implmentation of Longest Increasing Sequence DP solution
+// FindLIS returns the max length of increasing sequence in an given array
+
 #ifndef YIKLIU_DP_LIS
 #define YIKLIU_DP_LIS
 
