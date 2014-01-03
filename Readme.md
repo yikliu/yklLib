@@ -2,4 +2,4 @@ yklLib
 ==============================
 
 yklLib is collections of C++ implementation of basic data structures and algorithms.
-Just as good sport.
+It's good sport.

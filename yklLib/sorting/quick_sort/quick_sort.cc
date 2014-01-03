@@ -17,7 +17,7 @@ sorter::QuickSort<T>::QuickSort(void){
 }
 
 template<typename T>
-sorter::QuickSort<T>::~QuickSort(){
+sorter::QuickSort<T>::~QuickSort(void){
 }
 
 template<typename T>

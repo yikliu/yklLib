@@ -20,7 +20,6 @@ namespace yikliu {
     }
     
     namespace sorting{
-        
         template <typename T>
         class QuickSort{
         public:
@@ -28,10 +27,12 @@ namespace yikliu {
             virtual ~QuickSort();
             void Sort(T* data, int left, int right);
             
+            //allow OrderStatistics class to use the partition method
             template <typename U>
             friend class order_stat::OrderStatistics;
             
         private:
+            //partition around the rightest element
             int Partition(T* data, int left, int right);
             int RandomPartition(T* data, int left, int right);
             
