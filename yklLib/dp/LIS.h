@@ -23,6 +23,10 @@ namespace yikliu
             LIS(void){};
             virtual ~LIS(void){};
                 
+            //returns the contiguous increasing sequence in a from i to j
+            //Let M[i] = the LIS ending at i, then
+            // M[i+1] = M[i] + 1 if a[i+1] > a[i]
+            //        = 1 a[i+1] < a[i]
             int FindLIS(int * a, size_t size, int& max_i, int& max_j)
             {
                 int curMax = 1;
@@ -54,6 +58,30 @@ namespace yikliu
                 }
                 
                 return globalMax;
+            }
+            
+            //return the LIS subsequence (don't have to be contiguous)
+            // M[i] = SubLIS ending at i, then
+            // M[i+1] = 1 + Max{M[j]} for all j < i, if a[i+1] > a[i]
+            //        = 1
+            // return the Max(M[i]) is the solution
+            int FindSubLIS(int * arr, int size)
+            {
+                int maxSofar = 0;
+                int M[size];
+                M[0] = 1;
+                for (int i = 1; i < size; i++)
+                {
+                    if(arr[i] > arr[i-1])
+                    {
+                        M[i] = ++maxSofar;
+                    }
+                    else
+                    {
+                        M[i] = 1;
+                    }
+                }
+                return maxSofar;
             }
         };
     }

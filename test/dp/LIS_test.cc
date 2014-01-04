@@ -24,7 +24,14 @@ namespace yikliu{
             
             EXPECT_EQ(4, lis_.FindLIS(arr, n, max_i, max_j));
             EXPECT_EQ(2, max_i);
-            EXPECT_EQ(5, max_j);
+            EXPECT_EQ(5, max_j); //{9, 13, 21, 50}
+        }
+        
+        TEST(LISTEST, FindSubLIS) {
+            yikliu::dp::LIS lis_;
+            int arr[] = { 10, 22, 9, 13, 21, 50, 41, 60 };
+            int n = sizeof(arr)/sizeof(arr[0]);
+            EXPECT_EQ(5, lis_.FindSubLIS(arr, n));
         }
     }
 }
