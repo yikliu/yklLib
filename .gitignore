@@ -1,4 +1,7 @@
-yiklib.xcodeproj
 yiklib.xcodeproj/
+yklLib.xcodeproj
 Bundle/
+GTestBatch/
+test/.DS_Store
 Dependencies/
+.DS_Store
