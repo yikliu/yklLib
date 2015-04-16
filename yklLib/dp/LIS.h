@@ -60,7 +60,7 @@ namespace yikliu
                 return globalMax;
             }
             
-            //return the LIS subsequence (don't have to be contiguous)
+            // return the LIS subsequence (don't have to be contiguous)
             // M[i] = SubLIS ending at i, then
             // M[i+1] = 1 + Max{M[j]} for all j < i, if a[i+1] > a[i]
             //        = 1
