@@ -8,7 +8,6 @@
 
 #ifndef YKL_MY_STRING_H_
 #define YKL_MY_STRING_H_
-
 #include <iostream>
 #include <string.h>
 

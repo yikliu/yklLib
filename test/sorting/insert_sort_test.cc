@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-#include "../../yklLib/sorting/insert_sort/insert_sort.h"
+#include "../../src/sorting/insert_sort/insert_sort.h"
 #include "test_helper.h"
 #include <gtest/gtest.h>
 

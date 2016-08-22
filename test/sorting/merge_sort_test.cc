@@ -9,7 +9,7 @@
 #define YIKUN_TEST
 
 #include <gtest/gtest.h>
-#include "../../yklLib/sorting/merge_sort/merge_sort.h"
+#include "../../src/sorting/merge_sort/merge_sort.h"
 #include "../test_helper.h"
 
 namespace yikliu {

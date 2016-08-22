@@ -8,8 +8,8 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yklLib/data_structure/heap/heap.h"
-#include "../../yklLib/data_structure/heap/heap_node.h"
+#include "../../src/data_structure/heap/heap.h"
+#include "../../src/data_structure/heap/heap_node.h"
 #include <gtest/gtest.h>
 
 namespace yikliu{

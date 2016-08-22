@@ -9,8 +9,8 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yklLib/data_structure/binary_search_tree/binary_search_tree.h"
-#include "../../yklLib/data_structure/binary_search_tree/binary_tree_node.h"
+#include "../../src/data_structure/binary_search_tree/binary_search_tree.h"
+#include "../../src/data_structure/binary_search_tree/binary_tree_node.h"
 
 #include <gtest/gtest.h>
 

@@ -12,7 +12,7 @@
 #include <iostream>
 #include <gtest/gtest.h>
 
-#include "../../yklLib/sorting/quick_sort/quick_sort.h"
+#include "../../src/sorting/quick_sort/quick_sort.h"
 #include "test_helper.h"
 
 namespace yikliu{

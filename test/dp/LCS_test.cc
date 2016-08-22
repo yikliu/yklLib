@@ -8,7 +8,7 @@
 #ifndef YIKUN_TEST
 #define YIKUN_TEST
 
-#include "../../yklLib/dp/LCS.h"
+#include "../../src/dp/LCS.h"
 #include <gtest/gtest.h>
 
 namespace yikliu {

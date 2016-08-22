@@ -6,17 +6,12 @@
 //  Copyright (c) 2013 yikliu@me.com. All rights reserved.
 //
 
-#ifndef YIKUN_TEST
-#define YIKUN_TEST
-
-#include "../../yklLib/data_structure/my_string/my_string.h"
+#include "../../src/data_structure/my_string/my_string.h"
 #include <gtest/gtest.h>
 
-namespace yikliu{
-    namespace test
-    {
-        namespace ds = data_structure;
-        
+namespace yikliu {
+    namespace test{
+        namespace ds = yikliu::data_structure;
         TEST(MyStringTest, DefaultConstructor) {
             const ds::MyString s;
             EXPECT_STREQ(NULL, s.c_string());
@@ -56,7 +51,8 @@ namespace yikliu{
             s.Set(NULL);
             EXPECT_STREQ(NULL, s.c_string());
         }
-
     }
 }
-#endif
+
+
+

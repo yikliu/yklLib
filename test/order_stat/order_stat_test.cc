@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <gtest/gtest.h>
-#include "../../yklLib/order_stat/order_stat.h"
+#include "../../src/order_stat/order_stat.h"
 
 namespace yikliu{
     namespace test{

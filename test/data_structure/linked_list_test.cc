@@ -8,9 +8,9 @@
 
 #include <stdio.h>
 #include <gtest/gtest.h>
-#include "../../yklLib/data_structure/linked_list/linked_list.h"
-#include "../../yklLib/data_structure/linked_list/linked_node.h"
-#include "../../yklLib/exception/my_exception.h"
+#include "../../src/data_structure/linked_list/linked_list.h"
+#include "../../src/data_structure/linked_list/linked_node.h"
+#include "../../src/exception/my_exception.h"
 
 namespace yikliu{
     namespace test{
