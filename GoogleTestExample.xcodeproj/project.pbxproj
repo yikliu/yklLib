@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C3DF21B1D6AA8EF00D59D71 /* leetcode in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DF21A1D6AA8EF00D59D71 /* leetcode */; };
+		1C3DF21D1D6AAEAD00D59D71 /* reverse_words_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DF21C1D6AAEAD00D59D71 /* reverse_words_test.cpp */; };
+		1C3DF21E1D6AAEAD00D59D71 /* reverse_words_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DF21C1D6AAEAD00D59D71 /* reverse_words_test.cpp */; };
 		1CCAD0B11D6A991F00C40928 /* data_structure in Resources */ = {isa = PBXBuildFile; fileRef = 1CCAD0AC1D6A991F00C40928 /* data_structure */; };
 		1CCAD0B21D6A991F00C40928 /* dp in Resources */ = {isa = PBXBuildFile; fileRef = 1CCAD0AD1D6A991F00C40928 /* dp */; };
 		1CCAD0B31D6A991F00C40928 /* exception in Resources */ = {isa = PBXBuildFile; fileRef = 1CCAD0AE1D6A991F00C40928 /* exception */; };
@@ -150,6 +152,7 @@
 
 /* Begin PBXFileReference section */
 		1C3DF21A1D6AA8EF00D59D71 /* leetcode */ = {isa = PBXFileReference; lastKnownFileType = folder; name = leetcode; path = src/leetcode; sourceTree = "<group>"; };
+		1C3DF21C1D6AAEAD00D59D71 /* reverse_words_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reverse_words_test.cpp; path = test/leetcode/reverse_words_test.cpp; sourceTree = "<group>"; };
 		1CCAD0AC1D6A991F00C40928 /* data_structure */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data_structure; path = src/data_structure; sourceTree = "<group>"; };
 		1CCAD0AD1D6A991F00C40928 /* dp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dp; path = src/dp; sourceTree = "<group>"; };
 		1CCAD0AE1D6A991F00C40928 /* exception */ = {isa = PBXFileReference; lastKnownFileType = folder; name = exception; path = src/exception; sourceTree = "<group>"; };
@@ -303,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				1CCAD1061D6AA4A200C40928 /* reverse_string_test.cpp */,
+				1C3DF21C1D6AAEAD00D59D71 /* reverse_words_test.cpp */,
 			);
 			name = leetcode;
 			sourceTree = "<group>";
@@ -662,6 +666,7 @@
 				1CCAD1081D6AA4A200C40928 /* reverse_string_test.cpp in Sources */,
 				1CCAD0F51D6A9E3500C40928 /* heap_sort_test.cc in Sources */,
 				1CCAD0EA1D6A9E2300C40928 /* palindrome_test.cc in Sources */,
+				1C3DF21E1D6AAEAD00D59D71 /* reverse_words_test.cpp in Sources */,
 				1CCAD0FE1D6A9E3500C40928 /* quick_sort_test.cc in Sources */,
 				1CCAD0D71D6A9E1800C40928 /* linked_list_test.cc in Sources */,
 			);
@@ -704,6 +709,7 @@
 				C9C6722017E1876200ED64D4 /* GoogleTests.mm in Sources */,
 				1CCAD0D31D6A9E1800C40928 /* binary_search_tree_test.cc in Sources */,
 				1CCAD0FA1D6A9E3500C40928 /* merge_sort_test.cc in Sources */,
+				1C3DF21D1D6AAEAD00D59D71 /* reverse_words_test.cpp in Sources */,
 				1CCAD0E91D6A9E2300C40928 /* palindrome_test.cc in Sources */,
 				1CCAD0D91D6A9E1800C40928 /* my_string_test.cc in Sources */,
 			);

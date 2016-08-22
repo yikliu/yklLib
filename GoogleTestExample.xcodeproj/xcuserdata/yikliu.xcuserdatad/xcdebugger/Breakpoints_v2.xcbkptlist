@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "TEST(ReverseStringTest, simpleReverse)"
+            landmarkName = "TEST(LeetcodeTests, reverseString)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "TEST(ReverseStringTest, simpleReverse)"
+            landmarkName = "TEST(LeetcodeTests, reverseString)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

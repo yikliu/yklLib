@@ -12,7 +12,7 @@
 
 namespace yikliu{
     namespace test{
-        TEST(ReverseStringTest, simpleReverse)
+        TEST(LeetcodeTests, reverseString)
         {
             std::string str("hello");
             leetcode::ReverseString rs;
