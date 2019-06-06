@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C9C671B017E0312F00ED64D4"
                BuildableName = "standalone"
                BlueprintName = "standalone"
-               ReferencedContainer = "container:GoogleTestExample.xcodeproj">
+               ReferencedContainer = "container:yiklib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C9C671F917E1854400ED64D4"
                BuildableName = "TestBundle.xctest"
                BlueprintName = "TestBundle"
-               ReferencedContainer = "container:GoogleTestExample.xcodeproj">
+               ReferencedContainer = "container:yiklib.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "C9C671B017E0312F00ED64D4"
             BuildableName = "standalone"
             BlueprintName = "standalone"
-            ReferencedContainer = "container:GoogleTestExample.xcodeproj">
+            ReferencedContainer = "container:yiklib.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "C9C671B017E0312F00ED64D4"
             BuildableName = "standalone"
             BlueprintName = "standalone"
-            ReferencedContainer = "container:GoogleTestExample.xcodeproj">
+            ReferencedContainer = "container:yiklib.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "C9C671B017E0312F00ED64D4"
             BuildableName = "standalone"
             BlueprintName = "standalone"
-            ReferencedContainer = "container:GoogleTestExample.xcodeproj">
+            ReferencedContainer = "container:yiklib.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

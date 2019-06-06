@@ -578,7 +578,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C9C671AC17E0312F00ED64D4 /* Build configuration list for PBXProject "GoogleTestExample" */;
+			buildConfigurationList = C9C671AC17E0312F00ED64D4 /* Build configuration list for PBXProject "yiklib" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1004,7 +1004,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9C671AC17E0312F00ED64D4 /* Build configuration list for PBXProject "GoogleTestExample" */ = {
+		C9C671AC17E0312F00ED64D4 /* Build configuration list for PBXProject "yiklib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9C671B817E0312F00ED64D4 /* Debug */,
